@@ -1,0 +1,33 @@
+@startuml
+
+class Game
+class Main
+class StartMenu
+class Player
+class DrinkOption
+class PlayerStatus
+class GameStart
+class Cards
+class ScorePoints
+class GameEnd
+class TextUI
+class FileIO
+class CardsDB
+class PlayerDB
+
+
+Game *-- Main
+Main *-- StartMenu
+StartMenu *-- Player
+PlayerDB *-- StartMenu
+Player *-- DrinkOption
+DrinkOption *-- PlayerStatus
+PlayerStatus *-- GameStart
+GameStart *-- Cards
+CardsDB *-- Cards
+Player *-- FileIO
+ScorePoints *-- FileIO
+ScorePoints *-- Cards
+GameEnd *-- ScorePoints
+
+@enduml
