@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TextUI {
+
+    /*
      protected final Scanner scanner = new Scanner(System.in);
+
+     public FileIO fileIO = new FileIO();
 
      public void startGame() {
          System.out.println("Welcome to No Friends Allowed - A drinking game for lonely people");
@@ -100,4 +104,6 @@ public class TextUI {
              }
              }
      }
+
+     */
 }

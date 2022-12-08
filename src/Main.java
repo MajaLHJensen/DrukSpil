@@ -3,6 +3,10 @@ public class Main{
 
     public static void main(String[] args)
     {
+
+
+
+        /*
         // Here we call the method to welcome the player and log in or create an account.
         TextUI textUI = new TextUI();
         textUI.startGame();
@@ -10,6 +14,8 @@ public class Main{
         //Here we call the method where the player choose their drink of choice and playing status
         textUI.chooseDrinkOption();
         textUI.playerStatus();
+         */
+
     }
 
         // The method that calls the main() method, is used to restart in method startGame()
