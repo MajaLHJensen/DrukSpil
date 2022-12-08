@@ -1,7 +1,22 @@
-public class Main
-{
+public class Main{
+    static int count = 0;
+
     public static void main(String[] args)
     {
-        System.out.println("Hello world!");
+        // Here we call the method to welcome the player and log in or create an account.
+        TextUI textUI = new TextUI();
+        textUI.startGame();
+
+        //Here we call the method where the player choose their drink of choice and playing status
+        textUI.chooseDrinkOption();
+        textUI.playerStatus();
+    }
+
+        // The method that calls the main() method, is used to restart in method startGame()
+        static void mainCaller(){
+            count++;
+            if (count < 3) {
+                main(null);
+            }
     }
 }
