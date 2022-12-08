@@ -1,4 +1,4 @@
-Crate table GameQuestion
+Crate table GameQuestion intp sql?
 Insert into (number, question)
 
 1. Have i ever smoked a cigarette;
