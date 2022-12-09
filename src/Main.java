@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main{
     static int count = 0;
 
@@ -6,10 +8,7 @@ public class Main{
         // Here we call the method to welcome the player and log in or create an account.
         TextUI textUI = new TextUI();
         textUI.startGame();
-
-        //Here we call the method where the player choose their drink of choice and playing status
-        textUI.chooseDrinkOption();
-        textUI.playerStatus();
+        textUI.gameSettup();
     }
 
         // The method that calls the main() method, is used to restart in method startGame()

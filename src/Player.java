@@ -1,14 +1,13 @@
 public class Player {
     private String name;
     private int password;
-    private boolean isOver18;
+    private int age;
 
-    public Player(String name, int password, boolean isOver18) {
+    public Player(String name, int password, int age) {
         this.name = name;
         this.password = password;
-        this.isOver18 = isOver18;
+        this.age = age;
     }
-
 
     @Override
     public String toString() {
