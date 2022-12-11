@@ -1,10 +1,35 @@
-public class Main{
-    static int count = 0;
+import processing.core.*;
+
+public class Main extends PApplet{
+
+    public void setup()
+    {
+        background(0,115,0);
+    }
+
+    public void draw()
+    {
+        Graphics g = new Graphics();
+        g.processingTool = this;
+        g.game();
+    }
+    public void settings()
+    {
+        size(600,600);
+    }
+
+
 
     public static void main(String[] args)
     {
+        String[] appletArgs = new String[]{"Main"};
+        if (args != null) {
+            PApplet.main(concat(appletArgs, args));
+        } else
+        {
+            PApplet.main(appletArgs);
 
-
+        }
 
         /*
         // Here we call the method to welcome the player and log in or create an account.
@@ -18,6 +43,7 @@ public class Main{
 
     }
 
+    /*
         // The method that calls the main() method, is used to restart in method startGame()
         static void mainCaller(){
             count++;
@@ -25,4 +51,6 @@ public class Main{
                 main(null);
             }
     }
+     */
+
 }

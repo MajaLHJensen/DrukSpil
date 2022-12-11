@@ -1,3 +1,3 @@
 public class QuestionsDB {
-    ArrayList<Questions> questions;
+    //ArrayList<Questions> questions;
 }
