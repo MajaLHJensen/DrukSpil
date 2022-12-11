@@ -6,11 +6,9 @@ public class Graphics
     //PFont f = processingTool.createFont("Arial", 16);
     //String typing = "";
 
-
     //empty constructor
     public Graphics()
     {
-
 
     }
 
@@ -57,8 +55,7 @@ public class Graphics
             processingTool.fill(0,0,0);
             processingTool.text("Please sign up her", 50,120);
         }
-
-
+        
         // 1 for question 1
         if((processingTool.keyPressed) && (processingTool.key == '1'))
         {
