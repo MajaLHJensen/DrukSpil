@@ -55,7 +55,7 @@ public class Graphics
             processingTool.fill(0,0,0);
             processingTool.text("Please sign up her", 50,120);
         }
-        
+
         // 1 for question 1
         if((processingTool.keyPressed) && (processingTool.key == '1'))
         {
