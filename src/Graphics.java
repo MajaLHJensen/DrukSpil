@@ -1,5 +1,4 @@
 import processing.core.PApplet;
-import processing.core.PFont;
 
 public class Graphics
 {
@@ -18,7 +17,7 @@ public class Graphics
     public void game()
     {
         // s for start
-        if((processingTool.keyPressed == true) && (processingTool.key == 's'))
+        if((processingTool.keyPressed) && (processingTool.key == 's'))
         {
             processingTool.background(0,115,0);
             processingTool.textSize(40);
@@ -31,7 +30,7 @@ public class Graphics
         }
 
         // o for option
-        if((processingTool.keyPressed == true) && (processingTool.key == 'o'))
+        if((processingTool.keyPressed) && (processingTool.key == 'o'))
         {
             processingTool.background(0,115,0);
             processingTool.textSize(35);
@@ -41,7 +40,7 @@ public class Graphics
         }
 
         // a for login
-        if((processingTool.keyPressed == true) && (processingTool.key == 'a'))
+        if((processingTool.keyPressed) && (processingTool.key == 'a'))
         {
             processingTool.background(0,115,0);
             processingTool.textSize(20);
@@ -51,7 +50,7 @@ public class Graphics
         }
 
         // b for signUp
-        if((processingTool.keyPressed == true) && (processingTool.key == 'b'))
+        if((processingTool.keyPressed) && (processingTool.key == 'b'))
         {
             processingTool.background(0,115,0);
             processingTool.textSize(20);
@@ -61,7 +60,7 @@ public class Graphics
 
 
         // 1 for question 1
-        if((processingTool.keyPressed == true) && (processingTool.key == '1'))
+        if((processingTool.keyPressed) && (processingTool.key == '1'))
         {
             processingTool.background(0,115,0);
             processingTool.textSize(30);
