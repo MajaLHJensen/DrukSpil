@@ -1,12 +1,12 @@
 public class Player {
     private String name;
     private int password;
-    private int age;
+    private String answerForAge;
 
-    public Player(String name, int password, int age) {
+    public Player(String name, int password, String answerForAge) {
         this.name = name;
         this.password = password;
-        this.age = age;
+        this.answerForAge = answerForAge;
     }
 
     @Override

@@ -12,7 +12,7 @@ public class FileIO {
     ArrayList<Player> players = new ArrayList<>();
 
     File file = new File("data/UserLogin.csv");
-    boolean checkUser(String name,int password, int age) {
+    boolean checkUser(String name,int password, String answerForAge) {
         // Here we check user is already registered on UserLogin.csv when they are trying to login
         try{
             Scanner scanner = new Scanner(file);
@@ -35,7 +35,7 @@ public class FileIO {
             String newName = scanner.nextLine();
             int newPassword = scanner.nextInt();
             int setAge = scanner.nextInt();
-            register(newName, newPassword, setAge);
+            register(newName, newPassword, answerForAge);
             e.printStackTrace();
         }
         scanner.close();
@@ -62,7 +62,7 @@ public class FileIO {
         return true;
     }
 
-    void register(String newName, int newPassword, int setAge) {
+    void register(String newName, int newPassword, String answerForAge) {
         //Transfer new login to the file(UserLogin.csv) when the user signs up.
         try{
             if (!file.exists()){
@@ -74,7 +74,7 @@ public class FileIO {
             String userLogin = newName + ", " + newPassword;
             bw.write(userLogin);
             bw.close();
-            Player player = new Player(newName, newPassword, setAge);
+            Player player = new Player(newName, newPassword, answerForAge);
             players.add(player);
         } catch (Exception e){
             System.out.println(e);

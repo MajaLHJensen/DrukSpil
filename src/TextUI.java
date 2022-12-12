@@ -14,6 +14,7 @@ public class TextUI {
         System.out.println("Press 2 to create a new account");
         String name = "";
         String newName = "";
+        String answerForAge = "";
         while (true) {
             String answer = scanner.nextLine();
             if ("1".equals(answer)) {
@@ -21,51 +22,64 @@ public class TextUI {
                 name = scanner.nextLine();
                 System.out.println('\n' + "Password: ");
                 int password = scanner.nextInt();
-                System.out.println("Age: ");
-                int age = scanner.nextInt();
+                System.out.println("Are you 18+ ? press y for yes, press n for no");
+                answerForAge = scanner.nextLine();
+                if ("Y".equals(answerForAge)) {
+                    System.out.println("");
+                    if ("N".equals(answerForAge)) {
+                        System.out.println("You are too young baby boy. Please try again. ");
+                        startGame();
+                    }
 
-                if (fileIO.checkUser(name, password, age)) {
-                    System.out.println('\n' + "Welcome back to No Friends Allowed" + name);
-                    scanner.nextLine();
-                    break;
-                } else {
-                    System.out.println("Incorrect username or password. Please try again.");
-                    startGame();
+
+                    if (fileIO.checkUser(name, password, answerForAge)) {
+                        System.out.println('\n' + " Welcome back to No Friends Allowed" + name);
+                        scanner.nextLine();
+                        break;
+                    } else {
+                        System.out.println("Incorrect username or password. Please try again.");
+                        startGame();
+                    }
                 }
-            }
 
-            if ("2".equals(answer)) {
-                System.out.println("Please create a username with only letters: ");
-                newName = scanner.nextLine();
-                System.out.println("Please create a password with only numbers: ");
-                int newPassword = scanner.nextInt();
-                System.out.println("Please enter your age; ");
-                int setAge = scanner.nextInt();
+                if ("2".equals(answer)) {
+                    System.out.println("Please create a username with only letters: ");
+                    newName = scanner.nextLine();
+                    System.out.println("Please create a password with only numbers: ");
+                    int newPassword = scanner.nextInt();
+                    System.out.println("Are you 18+ ? press y for yes, press n for no");
+                    answerForAge = scanner.nextLine();
+                    if ("Y".equals(answerForAge)) {
+                        System.out.println("");
+                        if ("N".equals(answerForAge)) {
+                            System.out.println("You are too young baby boy. Please try again. ");
+                            startGame();
+                        }
 
-                if (fileIO.checkUserSignUp(newName)) {
-                    fileIO.register(newName, newPassword, setAge);
-                    scanner.nextLine();
-                    System.out.println("Welcome " + newName);
-                    System.out.println("Please press ENTER to continue");
-                    scanner.nextLine();
-                    break;
-                } else {
-                    System.out.println(" ");
-                    System.out.println("Username does already exist, please login or change username");
-                    System.out.println(" ");
-                    scanner.nextLine();
-                    Main.mainCaller();
+                        if (fileIO.checkUserSignUp(newName)) {
+                            fileIO.register(newName, newPassword, answerForAge);
+                            scanner.nextLine();
+                            System.out.println("Welcome " + newName);
+                            System.out.println("Please press ENTER to continue");
+                            scanner.nextLine();
+                            break;
+                        } else {
+                            System.out.println(" ");
+                            System.out.println("Username does already exist, please login or change username");
+                            System.out.println(" ");
+                            scanner.nextLine();
+                            Main.mainCaller();
+                        }
+                        System.out.println("Welcome to No Friends Allowed " + newName);
+                        System.out.println("Please press ENTER to continue");
+                        scanner.nextLine();
+                        break;
+                    }
                 }
-                System.out.println("Welcome to No Friends Allowed " + newName);
-                System.out.println("Please press ENTER to continue");
-                scanner.nextLine();
-                break;
             }
         }
     }
-
-    public void gameSettup() {
-        {
+        public void gameSettup () {
             System.out.println("Do you want to drink by your self or with other people?");
             System.out.println("1 - I choose to drink with others");
             System.out.println("2 - I choose to drink alone");
@@ -98,7 +112,8 @@ public class TextUI {
                 System.out.println("Starting game with non-alcohol and NO friends");
             }
         }
-    }
+
 }
+
 
 
