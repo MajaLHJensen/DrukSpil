@@ -6,8 +6,6 @@ public class TextUI {
 
     public void startGame() {
         System.out.println("Welcome to No Friends Allowed - A drinking game for lonely people");
-        System.out.println("Press ENTER to login or sign up");
-        scanner.nextLine();
 
         System.out.println("Do you want to create a new account or login to an already existing account?");
         System.out.println("Press 1 to login");
