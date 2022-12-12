@@ -9,7 +9,8 @@ public class Main {
         textUI.gameSettup();
 
         //Here we call the method to start the game
-
+        QuestionsDB questionsDB  = new QuestionsDB();
+        questionsDB.getAllQuestions();
 
         // Here we call the method to save the players points and display them
         Score score = new Score();
