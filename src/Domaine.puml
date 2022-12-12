@@ -1,0 +1,10 @@
+@startuml
+
+- Game
+- Player
+- GameStart
+- Cards
+- ScorePoints
+- GameEnd
+
+@enduml
