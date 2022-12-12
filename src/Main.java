@@ -4,7 +4,7 @@ public class Main extends PApplet{
 
     public void setup()
     {
-        background(0,115,0);
+        background(80,69,38);
     }
 
     public void draw()
