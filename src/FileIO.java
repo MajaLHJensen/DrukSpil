@@ -11,7 +11,7 @@ public class FileIO {
 
     ArrayList<Player> players = new ArrayList<>();
 
-    File file = new File("");
+    File file = new File("data/UserLogin.csv");
     boolean checkUser(String name,int password, int age) {
         // Here we check user is already registered on UserLogin.csv when they are trying to login
         try{
@@ -45,7 +45,7 @@ public class FileIO {
     boolean checkUserSignUp(String newName){
         // check user is already registered on UserLogin.csv when they are trying to create a new account
         try{
-            File file = new File("");
+            File file = new File("data/UserLogin.csv");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()){
                 String line = scanner.nextLine();
