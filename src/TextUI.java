@@ -54,7 +54,7 @@ public class TextUI {
                     System.out.println("Username does already exist, please login or change username");
                     System.out.println(" ");
                     scanner.nextLine();
-                    Main.mainCaller();
+                    startGame();
                 }
                 System.out.println("Welcome to No Friends Allowed " + newName);
                 System.out.println("Please press ENTER to continue");
@@ -77,7 +77,7 @@ public class TextUI {
             } else {
                 System.out.println("Option does sadly not exist, please try again");
             }
-            Main.mainCaller();
+            gameSettup();
 
 
             System.out.println('\n' + "Please choose if you want to drink alcohol or non-alcohol during the game");

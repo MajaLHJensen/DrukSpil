@@ -1,21 +1,18 @@
-import java.util.Scanner;
+import java.io.IOException;
 
-public class Main{
-    static int count = 0;
+public class Main {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
         // Here we call the method to welcome the player and log in or create an account.
-        TextUI textUI = new TextUI();
+       TextUI textUI = new TextUI();
         textUI.startGame();
         textUI.gameSettup();
-    }
 
-        // The method that calls the main() method, is used to restart in method startGame()
-        static void mainCaller(){
-            count++;
-            if (count < 3) {
-                main(null);
-            }
+        //Here we call the method to start the game
+
+
+        // Here we call the method to save the players points and display them
+        Score score = new Score();
+        score.savePoint();
     }
 }
