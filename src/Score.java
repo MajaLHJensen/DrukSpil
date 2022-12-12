@@ -1,4 +1,3 @@
-import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,8 +38,6 @@ public class Score {
 public void printScore() {
     Player player = new Player();
     System.out.println("Here is your highScore" + player.getName() + score);
-
-
 
     }
 }
