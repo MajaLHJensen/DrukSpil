@@ -12,15 +12,13 @@ public class TextUI {
         System.out.println("Do you want to create a new account or login to an already existing account?");
         System.out.println("Press 1 to login");
         System.out.println("Press 2 to create a new account");
-        String name = "";
-        String newName = "";
 
         // Method to login to an already existing account, that checks the csv file to see if the user is on there
         while (true) {
             String answer = scanner.nextLine();
             if ("1".equals(answer)) {
                 System.out.println('\n' + "Name: ");
-                name = scanner.nextLine();
+                String name = scanner.nextLine();
                 System.out.println('\n' + "Password: ");
                 int password = scanner.nextInt();
 
@@ -36,7 +34,7 @@ public class TextUI {
             //Method to create a new account, that checks to se if the username is already taken and saves the new user on the csv file
             if ("2".equals(answer)) {
                 System.out.println("Please create a username with only letters: ");
-                newName = scanner.nextLine();
+                String newName = scanner.nextLine();
                 System.out.println("Please create a password with only numbers: ");
                 int newPassword = scanner.nextInt();
                 if (fileIO.checkUserSignUp(newName)) {
@@ -68,8 +66,8 @@ public class TextUI {
         if (1 == pickStatus) {
             System.out.println("You are now ready to drink with potential new friend");
         }
-        if (2 == pickStatus) {
-            System.out.println('\n' + "You are now ready to drink all by your self");
+        else if (2 == pickStatus) {
+            System.out.println("You are now ready to drink all by your self");
         } else {
             System.out.println("Option does sadly not exist, please try again");
             gameSettup();
@@ -98,16 +96,16 @@ public class TextUI {
             }
         }
     }
-        public boolean isOver18() {
-            System.out.println("Please enter your age");
-            int answerForAge = scanner.nextInt();
-            if (answerForAge >=18) {
-                System.out.println("you are: " + answerForAge );
-                return true;
-            } else {
-                System.out.println("you are: " + answerForAge + "Age restricted game is starting. Go get your juice box big boy");
-            } return false;
-        }
+    public boolean isOver18() {
+        System.out.println("Please enter your age");
+        int answerForAge = scanner.nextInt();
+        if (answerForAge >=18) {
+            System.out.println("you are: " + answerForAge );
+            return true;
+        } else {
+            System.out.println("you are: " + answerForAge + ". Restricted game is starting. Go get your juice box big boy");
+        } return false;
+    }
 }
 
 
