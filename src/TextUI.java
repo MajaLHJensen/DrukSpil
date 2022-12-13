@@ -57,7 +57,7 @@ public class TextUI {
         }
     }
 
-    public void gameSettup () {
+    public void gameSetup () {
         System.out.println("Do you want to drink by your self or with other people?");
         System.out.println("1 - I choose to drink with others");
         System.out.println("2 - I choose to drink alone");
@@ -70,7 +70,7 @@ public class TextUI {
             System.out.println("You are now ready to drink all by your self");
         } else {
             System.out.println("Option does sadly not exist, please try again");
-            gameSettup();
+            gameSetup();
         }
         // If the method isOver18 is true we continue to the alcohol question and compare it to pickStatus
         // if it is false it starts the game without alcohol.
@@ -106,6 +106,20 @@ public class TextUI {
             System.out.println("you are: " + answerForAge + ". Restricted game is starting. Go get your juice box big boy");
         } return false;
     }
+
+        //this method is when the user plays the game alone for now
+        public void gameQuestions()
+        {
+            System.out.println('\n' +"When a question appear you must answering it truthfully and follow the instructions");
+            System.out.println("When you are ready, push ENTER");
+            scanner.nextLine();
+            System.out.println("Question 1");
+            /* QuestionsDB questionsDB = new QuestionsDB();
+            questionsDB.pickRandomQuestion(); */
+
+        }
+
+
 }
 
 
