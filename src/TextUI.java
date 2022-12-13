@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class TextUI {
@@ -79,19 +80,19 @@ public class TextUI {
             }
         }
     }
-        public void gameSettup () {
-            System.out.println("Do you want to drink by your self or with other people?");
-            System.out.println("1 - I choose to drink with others");
+        public void gameSetup() {
+            System.out.println("Do you want to drink by yourself or with random people?");
+            System.out.println("1 - I choose to drink with randoms");
             System.out.println("2 - I choose to drink alone");
             int pickStatus = scanner.nextInt();
             if (1 == pickStatus) {
                 System.out.println("You are now ready to drink with potential new friend");
             } else if (2 == pickStatus) {
-                System.out.println('\n' + "You are now ready to drink all by your self");
+                System.out.println('\n' + "You are now ready to drink all by yourself");
             } else {
                 System.out.println("Option does sadly not exist, please try again");
             }
-            gameSettup();
+            gameSetup();
 
 
             System.out.println('\n' + "Please choose if you want to drink alcohol or non-alcohol during the game");
@@ -112,6 +113,18 @@ public class TextUI {
                 System.out.println("Starting game with non-alcohol and NO friends");
             }
         }
+
+
+        //this method is when the user plays the game alone for now
+        public void gameQuestions()
+        {
+            System.out.println('\n' +"The questions will appear in random order.");
+            System.out.println('\n' +"When a question appear you must answering it truthfully and follow the instructions");
+            System.out.println("When you are ready, push ENTER");
+            
+        }
+
+
 
 }
 
