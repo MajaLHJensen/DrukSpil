@@ -102,10 +102,10 @@ public class TextUI {
             System.out.println("Please enter your age");
             int answerForAge = scanner.nextInt();
             if (answerForAge >=18) {
-                System.out.println("you are:" + answerForAge);
+                System.out.println("you are: " + answerForAge );
                 return true;
             } else {
-                System.out.println("Age restricted game is starting. Go get your juice box big boy");
+                System.out.println("you are: " + answerForAge + "Age restricted game is starting. Go get your juice box big boy");
             } return false;
         }
 }
