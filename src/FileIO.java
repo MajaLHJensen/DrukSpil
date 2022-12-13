@@ -6,36 +6,29 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileIO {
-
     protected final Scanner scanner = new Scanner(System.in);
-
     ArrayList<Player> players = new ArrayList<>();
-
     File file = new File("data/UserLogin.csv");
-    boolean checkUser(String name,int password, String answerForAge) {
-        // Here we check user is already registered on UserLogin.csv when they are trying to login
+
+    boolean checkUser(String name,int password) {
+        // Here we check if the user is already registered on UserLogin.csv when they are trying to login
         try{
             Scanner scanner = new Scanner(file);
-
             while (scanner.hasNextLine()){
                 String line = scanner.nextLine();
                 String[] user = line.split(", ");
                 String userNameFromFile = user[0];
                 int passwordFromFile = Integer.parseInt(user[1]);
-
                 if (name.equals(userNameFromFile))
                     if (password == passwordFromFile)
                         return true;
-                System.out.println(name);
-                System.out.println("Username does exist");
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e){
             System.out.println("UserLogin.csv does not exist");
             System.out.println("No users found, please register:");
             String newName = scanner.nextLine();
             int newPassword = scanner.nextInt();
-            int setAge = scanner.nextInt();
-            register(newName, newPassword, answerForAge);
+            register(newName, newPassword);
             e.printStackTrace();
         }
         scanner.close();
@@ -43,7 +36,7 @@ public class FileIO {
     }
 
     boolean checkUserSignUp(String newName){
-        // check user is already registered on UserLogin.csv when they are trying to create a new account
+        // Here we check if the user is already registered on UserLogin.csv when they are trying to create a new account
         try{
             File file = new File("data/UserLogin.csv");
             Scanner scanner = new Scanner(file);
@@ -51,7 +44,6 @@ public class FileIO {
                 String line = scanner.nextLine();
                 String[] user = line.split(", ");
                 String userNameFromFile = user[0];
-
                 if (newName.equals(userNameFromFile))
                     return false;
             }
@@ -62,8 +54,8 @@ public class FileIO {
         return true;
     }
 
-    void register(String newName, int newPassword, String answerForAge) {
-        //Transfer new login to the file(UserLogin.csv) when the user signs up.
+    void register(String newName, int newPassword) {
+        //Here we transfer the new login to the file(UserLogin.csv) when the user signs up.
         try{
             if (!file.exists()){
                 file.createNewFile();
@@ -74,7 +66,7 @@ public class FileIO {
             String userLogin = newName + ", " + newPassword;
             bw.write(userLogin);
             bw.close();
-            Player player = new Player(newName, newPassword, answerForAge);
+            Player player = new Player(newName, newPassword);
             players.add(player);
         } catch (Exception e){
             System.out.println(e);
