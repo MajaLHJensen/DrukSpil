@@ -121,6 +121,7 @@ public class TextUI {
             System.out.println('\n' +"The questions will appear in random order.");
             System.out.println('\n' +"When a question appear you must answering it truthfully and follow the instructions");
             System.out.println("When you are ready, push ENTER");
+
             
         }
 
