@@ -31,7 +31,6 @@ public class TextUI {
                         startGame();
                     }
 
-
                     if (fileIO.checkUser(name, password, answerForAge)) {
                         System.out.println('\n' + " Welcome back to No Friends Allowed" + name);
                         scanner.nextLine();
