@@ -1,6 +1,7 @@
 import java.sql.*;
 import java.util.ArrayList;
 import java.sql.Connection;
+import java.util.Random;
 
 public class QuestionsDB {
     private Connection connection;
@@ -30,4 +31,26 @@ public class QuestionsDB {
     {
         connection = DriverManager.getConnection(url, username, password);
     }
+
+
+    public void pickRandomQuestion()
+    {
+        /* this works to find a random in a arrayList
+
+        ArrayList<Integer> test = new ArrayList<>();
+        test.add(1);
+        test.add(2);
+        test.add(3);
+
+        Random rand = new Random();
+        int randomQuestion = test.get(rand.nextInt(test.size()));
+        System.out.println(randomQuestion);
+        */
+
+
+        // need to make sure that a question that already has been printed, is not printed again
+
+    }
+
+
 }

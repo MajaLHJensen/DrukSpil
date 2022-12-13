@@ -118,12 +118,16 @@ public class TextUI {
         //this method is when the user plays the game alone for now
         public void gameQuestions()
         {
-            System.out.println('\n' +"The questions will appear in random order.");
             System.out.println('\n' +"When a question appear you must answering it truthfully and follow the instructions");
             System.out.println("When you are ready, push ENTER");
+            scanner.nextLine();
+            System.out.println("Question 1");
+            /* QuestionsDB questionsDB = new QuestionsDB();
+            questionsDB.pickRandomQuestion(); */
 
-            
         }
+
+
 
 
 
