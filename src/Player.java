@@ -3,12 +3,12 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private int password;
-    private int age;
+    private String answerForAge;
 
-    public Player(String name, int password, int age) {
+    public Player(String name, int password, String answerForAge) {
         this.name = name;
         this.password = password;
-        this.age = age;
+        this.answerForAge = answerForAge;
     }
 
     public Player() {
@@ -17,6 +17,10 @@ public class Player {
 
     public String getName() {
         return name;
+    }
+
+    public String getAnswerForAge() {
+        return answerForAge;
     }
 
     @Override
