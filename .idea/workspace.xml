@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c82e311-d7ee-44af-9c74-6e4eb22505ec" name="Changes" comment="fixed TextUI and all the login information again">
+    <list default="true" id="8c82e311-d7ee-44af-9c74-6e4eb22505ec" name="Changes" comment="???">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_12_2022__12_31__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameQuestion" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameQuestion" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +76,7 @@
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -84,6 +89,14 @@
       <option name="presentableId" value="Default" />
       <updated>1670404616294</updated>
     </task>
+    <task id="LOCAL-00001" summary="???">
+      <created>1670842447383</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670842447383</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <task id="LOCAL-00001" summary="tilføj csv">
       <created>1670833658477</created>
       <option name="number" value="00001" />
@@ -101,6 +114,9 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -116,5 +132,9 @@
     <MESSAGE value="tilføj csv" />
     <MESSAGE value="added on the UML" />
     <option name="LAST_COMMIT_MESSAGE" value="added on the UML" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="???" />
+    <option name="LAST_COMMIT_MESSAGE" value="???" />
   </component>
 </project>
