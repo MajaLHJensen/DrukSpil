@@ -3,21 +3,30 @@ import java.sql.SQLException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException
+    {
         // Here we call the method to welcome the player and log in or create an account.
        TextUI textUI = new TextUI();
-        textUI.startGame();
-        textUI.gameSetup();
+       textUI.startGame();
+       textUI.clearConsole();
+       textUI.gameSetup();
 
         //Here we call the method to start the game
-       // QuestionsDB questionsDB  = new QuestionsDB();
-        //questionsDB.getAllQuestions();
-       // QuestionsDB questionsDB  = new QuestionsDB();
-        //questionsDB.getAllQuestions();
-        //questionsDB.pickRandomQuestion();
+        textUI.clearConsole();
+        // QuestionsDB questionsDB = new QuestionsDB();
+       //questionsDB.getAllQuestions();
 
         // Here we call the method to save the players points and display them
-        //Score score = new Score();
-        //score.savePoint();
+        Score score = new Score();
+        score.savePoint();
+
+        // Here we call the method to generate a random computer player
+        ComputerPlayer computerPlayer = new ComputerPlayer();
+        computerPlayer.printRandomQuestion();
+
+        // here we call the method to display the end screen
+        score.endGameScore();
+
+
     }
 }

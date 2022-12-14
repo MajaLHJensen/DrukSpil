@@ -1,0 +1,20 @@
+Index: src/QuestionsDB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/QuestionsDB.java b/src/QuestionsDB.java
+--- a/src/QuestionsDB.java	
++++ b/src/QuestionsDB.java	
+@@ -5,9 +5,9 @@
+ 
+ public class QuestionsDB {
+     private Connection connection;
+-    String url= "jdbc:mysql://127.0.0.1:3306/?user=root" + "autoReconnect=true&useSSL=false";
++    String url = "jdbc:mysql://127.0.0.1:3306/?user=root" + "autoReconnect=true&useSSL=false";
+     String username = "root";
+-    String password = "1692";
++    String password = "Krusell123";
+     ArrayList<Questions>questionsData = new ArrayList<>();
+ 
+     public ArrayList<Questions> getAllQuestions() throws SQLException

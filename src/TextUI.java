@@ -75,7 +75,7 @@ public class TextUI {
         // If the method isOver18 is true we continue to the alcohol question and compare it to pickStatus
         // if it is false it starts the game without alcohol.
         if(isOver18()) {
-            System.out.println("Please choose if you want to drink alcohol or non-alcohol during the game");
+            System.out.println("\nPlease choose if you want to drink alcohol or non-alcohol during the game");
             System.out.println("1 - I choose alcohol");
             System.out.println("2 - I choose non-alcohol");
             int input = scanner.nextInt();
@@ -97,7 +97,7 @@ public class TextUI {
         }
     }
     public boolean isOver18() {
-        System.out.println("Please enter your age");
+        System.out.println("\nPlease enter your age");
         int answerForAge = scanner.nextInt();
         if (answerForAge >=18) {
             System.out.println("you are: " + answerForAge );
@@ -117,10 +117,12 @@ public class TextUI {
             System.out.println("Question 1");
             /* QuestionsDB questionsDB = new QuestionsDB();
             questionsDB.pickRandomQuestion(); */
-
         }
-
-
+        public void clearConsole() {
+        for (int i = 0; i<100; i++){
+            System.out.println();
+        }
+}
 }
 
 
