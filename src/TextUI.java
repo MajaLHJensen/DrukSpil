@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class TextUI {
     protected final Scanner scanner = new Scanner(System.in);
     protected final FileIO fileIO = new FileIO();
+    public int pickStatus;
 
     public void startGame() {
         System.out.println("Welcome to NO FRIENDS ALLOWED - A drinking game for lonely people");

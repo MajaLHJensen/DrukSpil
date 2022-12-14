@@ -8,11 +8,15 @@ public class ComputerPlayer {
        return (int)(Math.random() * range) + min;
     }
     public void printRandomQuestion() throws SQLException, IOException {
-        System.out.println("\nNow it is your opponents turn, please refrain from drinking during");
-        int rand = getRandomQuestion(1, 2);
-        System.out.println("\nYour opponent pressed " + rand + " and did what you do when you press " + rand);
-        System.out.println("Get ready for your turn! Hope you have enjoyed your break...");
         TextUI textUI = new TextUI();
-        textUI.gameQuestions();
+        if (textUI.pickStatus == 1) {
+            System.out.println("\nNow it is your opponents turn, please refrain from drinking during");
+            int rand = getRandomQuestion(1, 2);
+            System.out.println("\nYour opponent pressed " + rand + " and did what you do when you press " + rand);
+            System.out.println("Get ready for your turn! Hope you have enjoyed your break...");
+            textUI.gameQuestions();
+        }else {
+textUI.gameQuestions();
+        }
     }
 }
