@@ -13,7 +13,7 @@ public class QuestionsDB {
     public ArrayList<Questions> getAllQuestions() throws SQLException
     {
         establishConnection();
-        String query = "SELECT * FROM question.mytable;";
+        String query = "SELECT * FROM question.mytable ORDER BY rand()";
         Statement statement = this.connection.createStatement();
         statement.execute(query);
         ResultSet resultSet = statement.getResultSet();
@@ -22,7 +22,7 @@ public class QuestionsDB {
             String question = resultSet.getString("Questions");
             Questions questions = new Questions(questionsID, question);
             questionsData.add(questions);
-            System.out.println(questions);
+            //System.out.println(questions);
         }
         return questionsData;
     }
