@@ -21,10 +21,8 @@ public class Player {
         return name;
     }
 
-
     @Override
     public String toString() {
         return "You are now logged in as: "  + name + ". Here are your previous highscores: " + score;
     }
-
 }

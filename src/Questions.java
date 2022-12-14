@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-import java.util.Random;
-
 public class Questions {
-
     private final String questionID;
     private final String question;
     public Questions(String questionsID, String question) {
@@ -11,10 +7,8 @@ public class Questions {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Question: " + questionID +
                 " " + question;
     }
-
 }
