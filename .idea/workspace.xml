@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="???">
+    <list default="true" id="8c82e311-d7ee-44af-9c74-6e4eb22505ec" name="Changes" comment="???">
+      <change afterPath="$PROJECT_DIR$/src/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/userLogin.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/userLogin.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/highScore.CSV" beforeDir="false" afterPath="$PROJECT_DIR$/highScore.CSV" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuestionsDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="JeanetteIkkeGrafisk2" />
+        <entry key="$PROJECT_DIR$" value="Safty2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,8 +56,9 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/majaj/Desktop/Coding/DrukSpil/lib/mysql-connector-java-5.1.49-bin.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
@@ -81,7 +88,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="???" />
+      <changelist id="8c82e311-d7ee-44af-9c74-6e4eb22505ec" name="Changes" comment="" />
       <created>1670404616294</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -122,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670930954123</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed sql exception and made the questions">
+      <created>1670932834161</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670932834161</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -143,6 +157,7 @@
     <MESSAGE value="???" />
     <MESSAGE value="fixed textui så den printer rigtigt" />
     <MESSAGE value="fixed textui så den printer rigtigt igen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed textui så den printer rigtigt igen" />
+    <MESSAGE value="Fixed sql exception and made the questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed sql exception and made the questions" />
   </component>
 </project>
