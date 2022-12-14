@@ -3,9 +3,9 @@ import java.util.ArrayList;
 public class Player {
     private String name;
     private int password;
-    private String answerForAge;
 
     ArrayList<Integer> score = new ArrayList<>();
+
 
     public Player(String name, int password) {
         this.name = name;
@@ -21,6 +21,13 @@ public class Player {
         return name;
     }
 
+    public ArrayList<Integer> getScore() {
+        return score;
+    }
+
+    public void setScore(ArrayList<Integer> score) {
+        this.score = score;
+    }
 
     @Override
     public String toString() {
