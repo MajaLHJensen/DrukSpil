@@ -35,9 +35,9 @@ public class QuestionsDB {
 
     public void pickRandomQuestion()
     {
-        /* this works to find a random in a arrayList
+        // this works to find a random in a arrayList
 
-        ArrayList<Integer> test = new ArrayList<>();
+       /* ArrayList<Integer> test = new ArrayList<>();
         test.add(1);
         test.add(2);
         test.add(3);
@@ -45,8 +45,8 @@ public class QuestionsDB {
         Random rand = new Random();
         int randomQuestion = test.get(rand.nextInt(test.size()));
         System.out.println(randomQuestion);
-        */
 
+        */
 
         // need to make sure that a question that already has been printed, is not printed again
 
