@@ -1,0 +1,99 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -3,17 +3,17 @@
+ 
+ public class Main {
+ 
+-    public static void main(String[] args) throws IOException {
++    public static void main(String[] args) throws IOException, SQLException{
+         // Here we call the method to welcome the player and log in or create an account.
++
+        TextUI textUI = new TextUI();
+         textUI.startGame();
+         textUI.gameSetup();
+ 
+         //Here we call the method to start the game
+-       // QuestionsDB questionsDB  = new QuestionsDB();
+-        //questionsDB.getAllQuestions();
+-       // QuestionsDB questionsDB  = new QuestionsDB();
+-        //questionsDB.getAllQuestions();
++
++        QuestionsDB questionsDB = new QuestionsDB();
++        questionsDB.getAllQuestions();
+         //questionsDB.pickRandomQuestion();
+ 
+         // Here we call the method to save the players points and display them
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/libraries/mysql_connector_java_5_1_49_bin1.xml
+===================================================================
+diff --git a/.idea/libraries/mysql_connector_java_5_1_49_bin1.xml b/.idea/libraries/mysql_connector_java_5_1_49_bin1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/mysql_connector_java_5_1_49_bin1.xml	
+@@ -0,0 +1,9 @@
++<component name="libraryTable">
++  <library name="mysql-connector-java-5.1.49-bin1">
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.49-bin.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/mysql_connector_java_5_1_49_bin.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/mysql_connector_java_5_1_49_bin.xml b/.idea/libraries/mysql_connector_java_5_1_49_bin.xml
+--- a/.idea/libraries/mysql_connector_java_5_1_49_bin.xml	
++++ b/.idea/libraries/mysql_connector_java_5_1_49_bin.xml	
+@@ -1,8 +1,6 @@
+ <component name="libraryTable">
+   <library name="mysql-connector-java-5.1.49-bin">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.49-bin.jar!/" />
+-    </CLASSES>
++    <CLASSES />
+     <JAVADOC />
+     <SOURCES />
+   </library>
+Index: DrukSpil.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/DrukSpil.iml b/DrukSpil.iml
+--- a/DrukSpil.iml	
++++ b/DrukSpil.iml	
+@@ -8,5 +8,6 @@
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="mysql-connector-java-5.1.49-bin" level="project" />
++    <orderEntry type="library" name="mysql-connector-java-5.1.49-bin1" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
