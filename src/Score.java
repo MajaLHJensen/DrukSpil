@@ -8,6 +8,7 @@ public class Score {
 
     public void savePoint() throws IOException {
     ///Display question and press 1 if the person took a drink and press 2 if the person passed.
+        System.out.println("Press 1 to drink. Press 2 to pass.");
         while (true) {
             String playerAnswer = scanner.nextLine();
             if ("1".equals(playerAnswer)) {
@@ -30,7 +31,7 @@ public class Score {
     // set næste spørgsmål ind og computeren tur
     }
 
-    //bruges til at display score til sidst
+    // bruges til at display score til sidst
     public void endGameScore() {
         Player player = new Player();
         System.out.println("Your are hopefully pissed and ready for a fun night alone or with friends");

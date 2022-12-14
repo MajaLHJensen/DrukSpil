@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class TextUI {
@@ -109,13 +110,15 @@ public class TextUI {
 
 
         //this method is when the user plays the game alone for now
-        public void gameQuestions() {
+        public void gameQuestions() throws IOException {
             System.out.println('\n' +"When a question appear you must answering it truthfully and follow the instructions");
-            System.out.println("When you are ready, push ENTER");
+            System.out.println("When you are ready, press ENTER");
             scanner.nextLine();
-            System.out.println("Question 1");
-            /* QuestionsDB questionsDB = new QuestionsDB();
-            questionsDB.pickRandomQuestion(); */
+            QuestionsDB questionsDB = new QuestionsDB();
+            questionsDB.pickRandomQuestion();
+            Score score = new Score();
+            score.savePoint();
+
         }
         public void clearConsole() {
         for (int i = 0; i<100; i++){
