@@ -9,6 +9,11 @@ public class QuestionsDB {
     String password = "1692";
     static ArrayList<Questions> questionsData = new ArrayList<>();
 
+    public static ArrayList<Questions> getQuestionsData()
+    {
+        return questionsData;
+    }
+
     public ArrayList<Questions> getAllQuestions() throws SQLException {
         establishConnection();
         String query = "SELECT * FROM question.mytable ORDER BY rand()";
@@ -32,7 +37,9 @@ public class QuestionsDB {
     public void pickRandomQuestion() {
         //This works to find a random question in our arrayList.
         int random = (int)(Math.random() * (questionsData.size()-1) +1);
-        System.out.println(questionsData.get(random));
+            Questions askQuestion = questionsData.get(random);
+            System.out.println(askQuestion);
+            questionsData.remove(askQuestion);
 
         //Need to make sure that a question that already has been printed, is not printed again.
         //We use the set method so that it will only put the question out one time. Set will not dublicate.

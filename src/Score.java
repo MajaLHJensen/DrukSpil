@@ -14,7 +14,7 @@ public class Score {
             if ("1".equals(playerAnswer)) {
                 int point = 1;
                 score.add(point);
-                System.out.println("Yay! You took a drink and got a point!");
+                System.out.println("\nYay! You took a drink and got a point!");
                 System.out.println("Your score is now: " + score);
                 break;
             }
@@ -28,7 +28,7 @@ public class Score {
                 savePoint();
             }
         }
-    // set næste spørgsmål ind og computeren tur
+    // sæt næste spørgsmål ind og computeren tur
     }
 
     // bruges til at display score til sidst
