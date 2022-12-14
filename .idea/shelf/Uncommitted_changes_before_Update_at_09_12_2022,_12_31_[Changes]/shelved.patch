@@ -6,8 +6,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/.idea/misc.xml b/.idea/misc.xml
---- a/.idea/misc.xml	(revision 9b062d4cc858b383600353b5eef25d4e848891c2)
-+++ b/.idea/misc.xml	(date 1670919796516)
+--- a/.idea/misc.xml	(revision 2cbf760cc06ddf9f1efecc927a854d2844d62f54)
++++ b/.idea/misc.xml	(date 1670585479097)
 @@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <project version="4">
