@@ -112,6 +112,7 @@ public class TextUI {
         //this method is when the user plays the game alone for now
         public void gameQuestions() throws IOException, SQLException {
             System.out.println('\n' +"When a question appear you must answer it truthfully and follow the instructions");
+            System.out.println('\n' +"If you during the game want to quit, press q");
             System.out.println("When you are ready, press ENTER");
             scanner.nextLine();
             QuestionsDB questionsDB = new QuestionsDB();
