@@ -8,11 +8,11 @@ public class TextUI {
     public int pickStatus;
 
     public void startGame() {
-        System.out.println("Welcome to NO FRIENDS ALLOWED - A drinking game for lonely people");
-        System.out.println("Press ENTER to login or sign up");
+        System.out.println("\nWelcome to NFA - NO FRIENDS ALLOWED - A drinking game for lonely people");
+        System.out.println("\nPress ENTER to start");
         scanner.nextLine();
 
-        System.out.println("Do you want to create a new account or login to an already existing account?");
+        System.out.println("Do you want to login or create a new account?");
         System.out.println("Press 1 to login");
         System.out.println("Press 2 to create a new account");
 
@@ -24,8 +24,9 @@ public class TextUI {
                 String name = scanner.nextLine();
                 System.out.println('\n' + "Password: ");
                 int password = scanner.nextInt();
+                scanner.nextLine();
                 if (fileIO.checkUser(name, password)) {
-                    System.out.println('\n' + " Welcome back to No Friends Allowed " + name);
+                    System.out.println("\nWelcome back to No Friends Allowed " + name + " press enter to continue");
                     scanner.nextLine();
                     break;
                 } else {
@@ -60,16 +61,16 @@ public class TextUI {
     }
 
     public void gameSetup () {
-        System.out.println("Do you want to drink by your self or with other people?");
-        System.out.println("1 - I choose to drink with others");
-        System.out.println("2 - I choose to drink alone");
+        System.out.println("You have now two options: do you want to drink by yourself or with other people?");
+        System.out.println("1 - I choose to drink alone");
+        System.out.println("2 - I choose to drink with others");
         int pickStatus = scanner.nextInt();
         // Here we save the users answer whether they are playing alone or not
         if (1 == pickStatus) {
-            System.out.println("You are now ready to drink with potential new friend");
+            System.out.println("You are now ready to drink by yourself");
         }
         else if (2 == pickStatus) {
-            System.out.println("You are now ready to drink all by your self");
+            System.out.println("You are now ready to drink with potential new friends");
         } else {
             System.out.println("Option does sadly not exist, please try again");
             gameSetup();
@@ -90,7 +91,7 @@ public class TextUI {
                 System.out.println("Starting game with alcohol and NO friends");
             }
             if ((input == 2) && (2 == pickStatus)) {
-                System.out.println("You have chosen not to drink alcohol during the game");
+                System.out.println("You have chosen to drink non-alcohol during the game");
                 System.out.println("Starting game with non-alcohol and friends");
             }
             if((input == 2) && (1 == pickStatus)){
@@ -105,7 +106,7 @@ public class TextUI {
             System.out.println("you are: " + answerForAge );
             return true;
         } else {
-            System.out.println("you are: " + answerForAge + ". Restricted game is starting. Go get your juice box big boy");
+            System.out.println("you are: " + answerForAge + ". Restricted game is starting. Go get your juice box kid");
         } return false;
     }
 
