@@ -7,11 +7,16 @@ public class Main{
 
     public static void main(String[] args) throws IOException, SQLException {
 
+        //Start the music!
+        InputsSound.RunMusic("SoundTrack/music.wav");
+
+
         // Here we call the method to welcome the player and log in or create an account.
         TextUI textUI = new TextUI();
         //textUI.startGame();
         //textUI.clearConsole();
         textUI.gameSetup();
+
 
         boolean done = false;
         while(!done) {
