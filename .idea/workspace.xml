@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="!!!">
+    <list default="true" id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="added in computerplayer">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Score.java" afterDir="false" />
