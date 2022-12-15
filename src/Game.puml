@@ -2,12 +2,14 @@
 !pragma layout smetana
 class Game
 class Main
+class FileIO
 class TextUI
 class Player
+class ComputerPlayer
 class Questions
-class GameEnd
-class FileIO
 class QuestionsDB
+class Score
+interface IConnect
 
 Game *-- Main
 Main *-- TextUI
