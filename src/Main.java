@@ -1,8 +1,7 @@
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class Main {
-
+public class Main{
     static int count = 0;
     public static void main(String[] args) throws IOException, SQLException {
 
@@ -33,8 +32,6 @@ public class Main {
             }
         }
     }
-
-
     // The method that calls the main() method, is used to restart in method startStreaming()
     static void mainCaller() throws SQLException, IOException
     {
@@ -45,5 +42,4 @@ public class Main {
             main(null);
         }
     }
-
 }
