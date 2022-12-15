@@ -5,11 +5,9 @@ class Main
 class FileIO
 class TextUI
 class Player
-class ComputerPlayer
 class Questions
 class QuestionsDB
 class Score
-interface IConnect
 
 Game *-- Main
 Main *-- TextUI

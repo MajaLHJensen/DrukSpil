@@ -2,12 +2,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class Main{
-    static int count = 0;
+    private static int count = 0;
 
     public static void main(String[] args) throws IOException, SQLException {
 
         //Start the music!
-        InputsSound.RunMusic("SoundTrack/music.wav");
+        InputsSound.runMusic("SoundTrack/music.wav");
 
         // Here we call the method to welcome the player and log in or create an account.
         TextUI textUI = new TextUI();
