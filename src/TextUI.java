@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class TextUI  extends Player {
+public class TextUI {
     protected final Scanner scanner = new Scanner(System.in);
     protected final FileIO fileIO = new FileIO();
 
@@ -45,6 +45,7 @@ public class TextUI  extends Player {
                     System.out.println("Welcome " + newName);
                     System.out.println("Please press ENTER to continue");
                     scanner.nextLine();
+                    scanner.nextLine();
                     break;
                 }else {
                     System.out.println("Username does already exist, please login or change username");
@@ -66,10 +67,10 @@ public class TextUI  extends Player {
         int pickStatus = scanner.nextInt();
         // Here we save the users answer whether they are playing alone or not
         if (1 == pickStatus) {
-            System.out.println("You are now ready to drink by yourself");
+            System.out.println("\nYou are now ready to drink by yourself");
         }
         else if (2 == pickStatus) {
-            System.out.println("You are now ready to drink with potential new friends");
+            System.out.println("\nYou are now ready to drink with potential new friends");
         } else {
             System.out.println("Option does sadly not exist, please try again");
             gameSetup();
@@ -82,22 +83,23 @@ public class TextUI  extends Player {
             System.out.println("2 - I choose non-alcohol");
             int input = scanner.nextInt();
 
-            if ((input == 1) && (1 == pickStatus)) {
+            if ((input == 1) && (2 == pickStatus)) {
                 System.out.println("You have chosen to drink alcohol during the game");
-                System.out.println("Starting game with alcohol and friends");
+                System.out.println("\nStarting game with alcohol and friends");
             }
-            if((input ==1) && (2 == pickStatus)) {
-                System.out.println("Starting game with alcohol and NO friends");
+            if((input ==1) && (1 == pickStatus)) {
+                System.out.println("\nStarting game with alcohol and NO friends");
             }
             if ((input == 2) && (2 == pickStatus)) {
                 System.out.println("You have chosen to drink non-alcohol during the game");
-                System.out.println("Starting game with non-alcohol and friends");
+                System.out.println("\nStarting game with non-alcohol and friends");
             }
             if((input == 2) && (1 == pickStatus)){
-                System.out.println("Starting game with non-alcohol and NO friends");
+                System.out.println("\nStarting game with non-alcohol and NO friends");
             }
         }
     }
+
     public boolean isOver18() {
         System.out.println("\nPlease enter your age");
         int answerForAge = scanner.nextInt();
@@ -109,11 +111,11 @@ public class TextUI  extends Player {
         } return false;
     }
 
-        //this method is when the user plays the game alone for now
         public void gameQuestions() throws IOException, SQLException {
             System.out.println('\n' +"When a question appear you must answer it truthfully and follow the instructions");
             System.out.println('\n' +"If you during the game want to quit, press q");
             System.out.println("When you are ready, press ENTER");
+            scanner.nextLine();
             scanner.nextLine();
             QuestionsDB questionsDB = new QuestionsDB();
             questionsDB.getAllQuestions();

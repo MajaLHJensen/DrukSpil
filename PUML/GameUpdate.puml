@@ -1,0 +1,60 @@
+@startuml
+
+class Game
+class Main
+class FileIO
+class TextUI
+class Player
+class ComputerPlayer
+class Questions
+class QuestionsDB
+class Score
+interface IConnect
+
+Game *-- Main
+Main *-- TextUI
+TextUI *-- Player
+Player *-- Questions
+Questions *-- QuestionsDB
+Player *-- FileIO
+FileIO *-- Questions
+Questions *-- Score
+
+Game : + Main main;
+Game : + void main()
+
+Main : + static void main()
+
+TextUI : + Scanner scanner;
+TextUI : + File file;
+TextUI : + void startGame()
+TextUI : + void gameSettup()
+
+QuestionsDB : - Connection connection;
+QuestionsDB : - String url;
+QuestionsDB : - String userName;
+QuestionsDB : - String userPassword;
+QuestionsDB : + ArrayList<Questions> questions;
+
+Player : - String name;
+Player : - int password;
+Player : - int age;
+Player : + Player()
+Player : + String getName()
+Player : + String toString()
+
+FileIO : + Scanner scanner;
+FileIO : + ArrayList<Player> players;
+FileIO : + File file;
+FileIO : + boolean checkUser()
+FileIO : + boolean checkUserSignUp()
+FileIO : + void register()
+
+Questions : + void getDrinkOption()
+Questions : + void getPlayerStatus()
+Questions : + void getScore()
+
+Score : + void saveScore()
+Score : + void printScore()
+
+@enduml

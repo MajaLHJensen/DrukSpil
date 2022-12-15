@@ -10,9 +10,6 @@ public class QuestionsDB implements IConnect {
     String password = "1692";
      ArrayList<Questions> questionsData = new ArrayList<>();
 
-    public ArrayList<Questions> getQuestionsData() {
-        return questionsData;}
-
     public ArrayList<Questions> getAllQuestions() throws SQLException {
         establishConnection();
         String query = "SELECT * FROM question.mytable ORDER BY rand()";
@@ -32,15 +29,11 @@ public class QuestionsDB implements IConnect {
         connection = DriverManager.getConnection(url, username, password);
     }
 
-    public void pickRandomQuestion() throws SQLException, IOException
-    {
-        //This works to find a random question in our arrayList.
+    public void pickRandomQuestion() {
+        //This works to find a random question in our arrayList and remove it after being used
         int random = (int)(Math.random() * (questionsData.size()-1) +1);
-            Questions askQuestion = questionsData.get(random);
-            System.out.println(askQuestion);
-            questionsData.remove(askQuestion);
-
-        //Need to make sure that a question that already has been printed, is not printed again.
-        //We use the set method so that it will only put the question out one time. Set will not dublicate.
+        Questions askQuestion = questionsData.get(random);
+        System.out.println(askQuestion);
+        questionsData.remove(askQuestion);
     }
 }
