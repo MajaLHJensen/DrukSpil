@@ -2,10 +2,12 @@ import java.util.ArrayList;
 
 public class Player {
     private String name;
+    private int password;
     ArrayList<Integer> score = new ArrayList<>();
 
     public Player(String name, int password) {
         this.name = name;
+        this.password = password;
         this.score = score;
     }
 

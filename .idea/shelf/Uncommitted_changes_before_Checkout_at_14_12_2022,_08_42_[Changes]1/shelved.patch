@@ -1,0 +1,44 @@
+Index: src/QuestionsDB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/QuestionsDB.java b/src/QuestionsDB.java
+--- a/src/QuestionsDB.java	
++++ b/src/QuestionsDB.java	
+@@ -37,3 +37,4 @@
+         }
+     }
+ }
++
+Index: .idea/csv-editor.xml
+===================================================================
+diff --git a/.idea/csv-editor.xml b/.idea/csv-editor.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/csv-editor.xml	
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CsvFileAttributes">
++    <option name="attributeMap">
++      <map>
++        <entry key="/Data/highScore.csv">
++          <value>
++            <Attribute>
++              <option name="separator" value="," />
++            </Attribute>
++          </value>
++        </entry>
++        <entry key="/Data/userLogin.csv">
++          <value>
++            <Attribute>
++              <option name="separator" value="," />
++            </Attribute>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file

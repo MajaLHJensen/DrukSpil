@@ -1,0 +1,17 @@
+Index: src/TextUI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/TextUI.java b/src/TextUI.java
+--- a/src/TextUI.java	
++++ b/src/TextUI.java	
+@@ -76,7 +76,7 @@
+                     }
+                 }
+                 if (fileIO.checkUserSignUp(newName)) {
+-                    fileIO.register(newName, newPassword, setAge);
++                    fileIO.register(newName, newPassword, answerForAge);
+                     scanner.nextLine();
+                     System.out.println("Welcome " + newName);
+                     System.out.println("Please press ENTER to continue");

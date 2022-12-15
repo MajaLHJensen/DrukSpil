@@ -6,16 +6,23 @@ public class Main{
     static int count = 0;
 
     public static void main(String[] args) throws IOException, SQLException {
+<<<<<<< HEAD
+=======
+
+        //Start the music!
+        InputsSound.RunMusic("SoundTrack/music.wav");
+
+>>>>>>> Safty2
 
         // Here we call the method to welcome the player and log in or create an account.
         TextUI textUI = new TextUI();
-        textUI.startGame();
-        textUI.clearConsole();
+        //textUI.startGame();
+        //textUI.clearConsole();
         textUI.gameSetup();
 
+
         boolean done = false;
-        while(!done)
-        {
+        while(!done) {
             //Here we call the method to start the game
             textUI.clearConsole();
             QuestionsDB questionsDB = new QuestionsDB();
@@ -29,7 +36,7 @@ public class Main{
             Score score = new Score();
             score.endGameScore();
 
-            if (questionsDB.questionsData.size() == 0)  {
+            if (questionsDB.questionsData.size() == 0) {
                 done= true;
             }
         }

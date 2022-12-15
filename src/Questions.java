@@ -7,8 +7,7 @@ public class Questions extends QuestionsDB{
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Question: " + questionID +
                 " " + question;
     }
