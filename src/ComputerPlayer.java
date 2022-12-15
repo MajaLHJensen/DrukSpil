@@ -1,8 +1,7 @@
 import java.io.IOException;
 import java.sql.SQLException;
-
 public class ComputerPlayer {
-   public int getRandomQuestion (int min, int max){
+    public int getRandomQuestion (int min, int max){
        // Here we pick a random number between 1 and 2
        int range = (max - min) + 1;
        return (int)(Math.random() * range) + min;
@@ -16,7 +15,7 @@ public class ComputerPlayer {
             System.out.println("Get ready for your turn! Hope you have enjoyed your break...");
             textUI.gameQuestions();
         }else {
-textUI.gameQuestions();
+            textUI.gameQuestions();
         }
     }
 }

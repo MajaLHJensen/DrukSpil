@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class TextUI {
+public class TextUI  extends Player {
     protected final Scanner scanner = new Scanner(System.in);
     protected final FileIO fileIO = new FileIO();
     public int pickStatus;
@@ -12,11 +12,11 @@ public class TextUI {
         System.out.println("Press ENTER to login or sign up");
         scanner.nextLine();
 
-        System.out.println("Do you want to create a new account or login to an already existing account?");
-        System.out.println("Press 1 to login");
+        System.out.println("Do you want to create a new account or log in to an already existing account?");
+        System.out.println("Press 1 to log in");
         System.out.println("Press 2 to create a new account");
 
-        // Method to login to an already existing account, that checks the csv file to see if the user is on there
+        // Method to log in to an already existing account, that checks the csv file to see if the user is on there
         while (true) {
             String answer = scanner.nextLine();
             if ("1".equals(answer)) {

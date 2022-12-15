@@ -1,4 +1,4 @@
-public class Questions {
+public class Questions extends QuestionsDB{
     private final String questionID;
     private final String question;
     public Questions(String questionsID, String question) {

@@ -69,7 +69,7 @@ public class FileIO {
             Player player = new Player(newName, newPassword);
             players.add(player);
         } catch (Exception e){
-            System.out.println(e);
+            System.out.println("Something went wrong. Please try again.");
         }
     }
 }
