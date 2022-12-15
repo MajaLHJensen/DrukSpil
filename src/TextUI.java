@@ -1,8 +1,11 @@
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class TextUI {
     protected final Scanner scanner = new Scanner(System.in);
     protected final FileIO fileIO = new FileIO();
+    public int pickStatus;
 
     public void startGame() {
         System.out.println("Welcome to NO FRIENDS ALLOWED - A drinking game for lonely people");
@@ -21,7 +24,6 @@ public class TextUI {
                 String name = scanner.nextLine();
                 System.out.println('\n' + "Password: ");
                 int password = scanner.nextInt();
-
                 if (fileIO.checkUser(name, password)) {
                     System.out.println('\n' + " Welcome back to No Friends Allowed " + name);
                     scanner.nextLine();
@@ -107,23 +109,21 @@ public class TextUI {
         } return false;
     }
 
-
         //this method is when the user plays the game alone for now
-        public void gameQuestions()
-        {
-            System.out.println('\n' +"When a question appear you must answering it truthfully and follow the instructions");
-            System.out.println("When you are ready, push ENTER");
+        public void gameQuestions() throws IOException, SQLException {
+            System.out.println('\n' +"When a question appear you must answer it truthfully and follow the instructions");
+            System.out.println('\n' +"If you during the game want to quit, press q");
+            System.out.println("When you are ready, press ENTER");
             scanner.nextLine();
-            System.out.println("Question 1");
-            /* QuestionsDB questionsDB = new QuestionsDB();
-            questionsDB.pickRandomQuestion(); */
+            QuestionsDB questionsDB = new QuestionsDB();
+            questionsDB.getAllQuestions();
+            questionsDB.pickRandomQuestion();
+            Score score = new Score();
+            score.savePoint();
         }
         public void clearConsole() {
         for (int i = 0; i<100; i++){
             System.out.println();
         }
+    }
 }
-}
-
-
-
