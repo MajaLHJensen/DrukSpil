@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c82e311-d7ee-44af-9c74-6e4eb22505ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FileIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Questions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/QuestionsDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TextUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="Last changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PUML/Game.puml" beforeDir="false" afterPath="$PROJECT_DIR$/PUML/Game.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PUML/GameUpdate.puml" beforeDir="false" afterPath="$PROJECT_DIR$/PUML/GameUpdate.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InputsSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputsSound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +22,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Safty2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,12 +49,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Bruger/Desktop/Documents/Datamatiker/Flow 4 Databaser og datastrukturer/SP3-master",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\majaj\Desktop\Coding\Ice projekt\DrukSpil\PUML" />
+      <recent name="$PROJECT_DIR$/SoundTrack" />
+      <recent name="$PROJECT_DIR$/src/Sound" />
+      <recent name="$PROJECT_DIR$/Sound" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="DrukSpil" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +97,81 @@
       <option name="presentableId" value="Default" />
       <updated>1670404616294</updated>
     </task>
+    <task id="LOCAL-00001" summary="tilføj csv">
+      <created>1670833658477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670833658477</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added on the UML">
+      <created>1670848126291</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670848126291</updated>
+    </task>
+    <task id="LOCAL-00003" summary="merge conflict">
+      <created>1670930826781</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670930826781</updated>
+    </task>
+    <task id="LOCAL-00004" summary="merge conflict">
+      <created>1670930836528</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670930836528</updated>
+    </task>
+    <task id="LOCAL-00005" summary="deleted userloggin histry">
+      <created>1670930954123</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670930954123</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed sql exception and made the questions">
+      <created>1670932834161</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670932834161</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ikd">
+      <created>1671091818895</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671091818895</updated>
+    </task>
+    <task id="LOCAL-00008" summary="umm idk whats wrong with this commit/push but it needs to stop rn !!!">
+      <created>1671092834591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671092834591</updated>
+    </task>
+    <task id="LOCAL-00009" summary="again whats wrong with this.....">
+      <created>1671092863690</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671092863690</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Last changes">
+      <created>1671109234364</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671109234364</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -76,5 +183,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="???" />
+    <MESSAGE value="fixed textui så den printer rigtigt" />
+    <MESSAGE value="fixed textui så den printer rigtigt igen" />
+    <MESSAGE value="Fixed sql exception and made the questions" />
+    <MESSAGE value="umm idk whats wrong with" />
+    <MESSAGE value="umm idk whats wrong with this commit/push but it needs to stop rn !!!" />
+    <MESSAGE value="again whats wrong with this....." />
+    <MESSAGE value="Last changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last changes" />
   </component>
 </project>

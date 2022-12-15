@@ -1,0 +1,74 @@
+@startuml
+
+class Main
+class FileIO
+class TextUI
+class Player
+class ComputerPlayer
+class Questions
+class QuestionsDB
+class Score
+interface IConnect
+class InputSound
+
+Main *-- InputSound
+Main *-- TextUI
+TextUI *-- Player
+TextUI *-- Questions
+Questions *-- IConnect
+Player *-- FileIO
+TextUI *-- Score
+TextUI *-- ComputerPlayer
+IConnect *-- QuestionsDB
+
+Main : + static void main()
+Main : - static int count;
+Main : + static void mainCaller()
+
+TextUI : # final Scanner scanner;
+TextUI : # final FileIO fileIO;
+TextUI : + void startGame()
+TextUI : + void gameSetup()
+TextUI : + boolean isOver18()
+TextUI : + void gameQuestions()
+TextUI : + void clearConsole()
+
+QuestionsDB : - Connection connection;
+QuestionsDB : - String url;
+QuestionsDB : - String userName;
+QuestionsDB : - String userPassword;
+QuestionsDB : + ArrayList<Questions> questionsData;
+QuestionsDB : + ArrayList<Questions> getAllQuestions()
+QuestionsDB : - void establishConnection()
+QuestionsDB : + void pickRandomQuestion()
+
+Player : - String name;
+Player : - int password;
+Player : + Player()
+Player : + String toString()
+
+FileIO : # final Scanner scanner;
+FileIO : # ArrayList<Player> players;
+FileIO : + File file;
+FileIO : + boolean checkUser()
+FileIO : + boolean checkUserSignUp()
+FileIO : + void register()
+
+Questions : - final String questionID;
+Questions : - final String question;
+Questions : + Questions()
+Questions : + String toString()
+
+Score : # final Scanner scanner;
+Score : + ArrayList<Integer> score;
+Score : + void savePoint()
+Score : + void endGameScore()
+
+ComputerPlayer : + int getRandomQuestion()
+ComputerPlayer : + void printRandomQuestion()
+
+IConnect : + ArrayList<Questions> getAllQuestions()
+
+InputSound : + static void runMusic()
+
+@enduml

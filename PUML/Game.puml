@@ -1,13 +1,13 @@
 @startuml
-
+!pragma layout smetana
 class Game
 class Main
+class FileIO
 class TextUI
 class Player
 class Questions
-class GameEnd
-class FileIO
 class QuestionsDB
+class Score
 
 Game *-- Main
 Main *-- TextUI
@@ -16,7 +16,7 @@ Player *-- Questions
 Questions *-- QuestionsDB
 Player *-- FileIO
 FileIO *-- Questions
-Questions *-- GameEnd
+Questions *-- Score
 
 
 Game : + Main main;
@@ -25,10 +25,9 @@ Game : + void main()
 Main : + static void main()
 
 TextUI : + Scanner scanner;
-TextUI : + void clearTheConsole()
+TextUI : + File file;
 TextUI : + void startGame()
-TextUI : + void chooseDrinkOption()
-TextUI : + void choosePlayerStatus()
+TextUI : + void gameSettup()
 
 QuestionsDB : - Connection connection;
 QuestionsDB : - String url;
@@ -38,28 +37,24 @@ QuestionsDB : + ArrayList<Questions> questions;
 
 Player : - String name;
 Player : - int password;
-Player : + boolean isOver18;
+Player : - int age;
 Player : + Player()
 Player : + String getName()
-Player : + void setName()
-Player : + int getPassword()
-Player : + void setPassword()
 Player : + String toString()
 
+FileIO : + Scanner scanner;
 FileIO : + ArrayList<Player> players;
-FileIO : + ArrayList<Score> scores;
 FileIO : + File file;
-FileIO : + void registerPlayer()
 FileIO : + boolean checkUser()
 FileIO : + boolean checkUserSignUp()
-FileIO : + void registerScore()
+FileIO : + void register()
 
 Questions : + void getDrinkOption()
 Questions : + void getPlayerStatus()
 Questions : + void getScore()
 
-GameEnd : + String displayHighScore()
-GameEnd : + String checkWhoWon()
+Score : + void saveScore()
+Score : + void printScore()
 
 
 @enduml

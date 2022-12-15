@@ -1,0 +1,185 @@
+Index: src/QuestionsDB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.sql.*;\nimport java.util.ArrayList;\nimport java.sql.Connection;\nimport java.util.Random;\n\npublic class QuestionsDB {\n    private Connection connection;\n    String url= \"jdbc:mysql://127.0.0.1:3306/?user=root\" + \"autoReconnect=true&useSSL=false\";\n    String username = \"root\";\n    String password = \"1692\";\n    ArrayList<Questions>questionsData = new ArrayList<>();\n\n    public ArrayList<Questions> getAllQuestions() throws SQLException\n    {\n        establishConnection();\n        String query = \"SELECT * FROM question.mytable ORDER BY rand()\";\n        Statement statement = this.connection.createStatement();\n        statement.execute(query);\n        ResultSet resultSet = statement.getResultSet();\n        while (resultSet.next()){\n            String questionsID = resultSet.getString(\"QuestionID\");\n            String question = resultSet.getString(\"Questions\");\n            Questions questions = new Questions(questionsID, question);\n            questionsData.add(questions);\n            //System.out.println(questions);\n        }\n        return questionsData;\n    }\n\n    private void establishConnection() throws SQLException\n    {\n        connection = DriverManager.getConnection(url, username, password);\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/QuestionsDB.java b/src/QuestionsDB.java
+--- a/src/QuestionsDB.java	(revision 924af723bf379b52f0e402306e1986015b9a360b)
++++ b/src/QuestionsDB.java	(date 1670941386665)
+@@ -5,9 +5,9 @@
+ 
+ public class QuestionsDB {
+     private Connection connection;
+-    String url= "jdbc:mysql://127.0.0.1:3306/?user=root" + "autoReconnect=true&useSSL=false";
++    String url = "jdbc:mysql://127.0.0.1:3306/?user=root" + "autoReconnect=true&useSSL=false";
+     String username = "root";
+-    String password = "1692";
++    String password = "Krusell123";
+     ArrayList<Questions>questionsData = new ArrayList<>();
+ 
+     public ArrayList<Questions> getAllQuestions() throws SQLException
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.io.IOException;\nimport java.sql.SQLException;\n\npublic class Main {\n\n    public static void main(String[] args) throws SQLException\n    {\n        // Here we call the method to welcome the player and log in or create an account.\n       //TextUI textUI = new TextUI();\n       //textUI.startGame();\n       //textUI.gameSetup();\n\n        //Here we call the method to start the game\n       QuestionsDB questionsDB = new QuestionsDB();\n       questionsDB.getAllQuestions();\n\n        // Here we call the method to save the players points and display them\n        //Score score = new Score();\n        //score.savePoint();\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 924af723bf379b52f0e402306e1986015b9a360b)
++++ b/src/Main.java	(date 1670941599902)
+@@ -6,13 +6,14 @@
+     public static void main(String[] args) throws SQLException
+     {
+         // Here we call the method to welcome the player and log in or create an account.
+-       //TextUI textUI = new TextUI();
++        //TextUI textUI = new TextUI();
+        //textUI.startGame();
+        //textUI.gameSetup();
+ 
+         //Here we call the method to start the game
+-       QuestionsDB questionsDB = new QuestionsDB();
+-       questionsDB.getAllQuestions();
++
++        QuestionsDB questionsDB = new QuestionsDB();
++        questionsDB.getAllQuestions();
+ 
+         // Here we call the method to save the players points and display them
+         //Score score = new Score();
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" default=\"true\" project-jdk-name=\"18\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 924af723bf379b52f0e402306e1986015b9a360b)
++++ b/.idea/misc.xml	(date 1670938187711)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/libraries/mysql_connector_java_5_1_49_bin1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/mysql_connector_java_5_1_49_bin1.xml b/.idea/libraries/mysql_connector_java_5_1_49_bin1.xml
+new file mode 100644
+--- /dev/null	(date 1670941186473)
++++ b/.idea/libraries/mysql_connector_java_5_1_49_bin1.xml	(date 1670941186473)
+@@ -0,0 +1,9 @@
++<component name="libraryTable">
++  <library name="mysql-connector-java-5.1.49-bin1">
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.49-bin.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/mysql_connector_java_5_1_49_bin.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"mysql-connector-java-5.1.49-bin\">\n    <CLASSES>\n      <root url=\"jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.49-bin.jar!/\" />\n    </CLASSES>\n    <JAVADOC />\n    <SOURCES />\n  </library>\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/mysql_connector_java_5_1_49_bin.xml b/.idea/libraries/mysql_connector_java_5_1_49_bin.xml
+--- a/.idea/libraries/mysql_connector_java_5_1_49_bin.xml	(revision 924af723bf379b52f0e402306e1986015b9a360b)
++++ b/.idea/libraries/mysql_connector_java_5_1_49_bin.xml	(date 1670941186462)
+@@ -1,8 +1,6 @@
+ <component name="libraryTable">
+   <library name="mysql-connector-java-5.1.49-bin">
+-    <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.49-bin.jar!/" />
+-    </CLASSES>
++    <CLASSES />
+     <JAVADOC />
+     <SOURCES />
+   </library>
+Index: DrukSpil.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n    <orderEntry type=\"library\" name=\"mysql-connector-java-5.1.49-bin\" level=\"project\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/DrukSpil.iml b/DrukSpil.iml
+--- a/DrukSpil.iml	(revision 924af723bf379b52f0e402306e1986015b9a360b)
++++ b/DrukSpil.iml	(date 1670941186454)
+@@ -8,5 +8,6 @@
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+     <orderEntry type="library" name="mysql-connector-java-5.1.49-bin" level="project" />
++    <orderEntry type="library" name="mysql-connector-java-5.1.49-bin1" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8c82e311-d7ee-44af-9c74-6e4eb22505ec\" name=\"Changes\" comment=\"Fixed sql exception and made the questions\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Questions.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Questions.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/QuestionsDB.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/QuestionsDB.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeStyleSettingsInfer\">\n    <option name=\"done\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"Safty2\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectCodeStyleSettingsMigration\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2Ia0vAmMJOHoS6umG5IUEfjOoY9\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/majaj/Desktop/Coding/DrukSpil/lib/mysql-connector-java-5.1.49-bin.jar&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"DrukSpil\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8c82e311-d7ee-44af-9c74-6e4eb22505ec\" name=\"Changes\" comment=\"\" />\n      <created>1670404616294</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1670404616294</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"tilføj csv\">\n      <created>1670833658477</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670833658477</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"added on the UML\">\n      <created>1670848126291</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670848126291</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"merge conflict\">\n      <created>1670930826781</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670930826781</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"merge conflict\">\n      <created>1670930836528</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670930836528</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"deleted userloggin histry\">\n      <created>1670930954123</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670930954123</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Fixed sql exception and made the questions\">\n      <created>1670932834161</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1670932834161</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"UnknownFeatures\">\n    <option featureType=\"com.intellij.fileTypeFactory\" implementationName=\"*.csv\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"???\" />\n    <MESSAGE value=\"fixed textui så den printer rigtigt\" />\n    <MESSAGE value=\"fixed textui så den printer rigtigt igen\" />\n    <MESSAGE value=\"Fixed sql exception and made the questions\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Fixed sql exception and made the questions\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 924af723bf379b52f0e402306e1986015b9a360b)
++++ b/.idea/workspace.xml	(date 1671004844225)
+@@ -5,9 +5,11 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8c82e311-d7ee-44af-9c74-6e4eb22505ec" name="Changes" comment="Fixed sql exception and made the questions">
++      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_49_bin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_49_bin.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/DrukSpil.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DrukSpil.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Questions.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/QuestionsDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuestionsDB.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -29,7 +31,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Safty2" />
++        <entry key="$PROJECT_DIR$" value="Signe" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -46,16 +48,16 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/majaj/Desktop/Coding/DrukSpil/lib/mysql-connector-java-5.1.49-bin.jar&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "C:/Users/majaj/Desktop/Coding/DrukSpil/lib/mysql-connector-java-5.1.49-bin.jar",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.23809522",
++    "project.structure.side.proportion": "0.2"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$" />
