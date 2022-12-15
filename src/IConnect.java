@@ -1,5 +1,6 @@
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public interface IConnect {
-    void getAllQuestions() throws SQLException;
+    ArrayList<Questions> getAllQuestions() throws SQLException;
 }

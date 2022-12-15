@@ -27,10 +27,11 @@ public class Score {
             }
             if("q".equals(playerAnswer))
             {
-                TextUI textui = new TextUI();
-                textui.clearConsole();
+                TextUI textUI = new TextUI();
+                textUI.clearConsole();
                 Main.mainCaller();
-            }else {
+            }
+            else {
                 System.out.println("Sorry your finger must have slipped, maybe you had had enough...");
                 scanner.nextLine();
                 savePoint();
