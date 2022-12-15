@@ -36,14 +36,13 @@ public class Score {
                 savePoint();
             }
         }
-    // sæt næste spørgsmål ind og computeren tur
     }
-
-    // bruges til at display score til sidst
-    public void endGameScore() {
+    public void endGameScore() throws SQLException, IOException {
         Player player = new Player();
         System.out.println("Your are hopefully pissed and ready for a fun night alone or with friends");
         System.out.println("Here is your highScore" + player.getName() + player.getScore());
-        System.out.println("Thank you for playing!!");
+        System.out.println("Thank you for playing!! if you want to play again press ENTER");
+        scanner.nextLine();
+        Main.mainCaller();
     }
 }
