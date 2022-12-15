@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="Made the questions come out one by one and in random order.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="880d74af-1f9d-450d-97ec-1c941ef5119c" name="Changes" comment="added om UML" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671097522515</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added om UML">
+      <created>1671098384296</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671098384296</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -160,6 +163,7 @@
     <MESSAGE value="fixed textui så den printer rigtigt igen" />
     <MESSAGE value="Fixed sql exception and made the questions" />
     <MESSAGE value="added extent, implements and iconnect" />
-    <option name="LAST_COMMIT_MESSAGE" value="added extent, implements and iconnect" />
+    <MESSAGE value="added om UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="added om UML" />
   </component>
 </project>
